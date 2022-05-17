@@ -32,26 +32,26 @@
     }
 
     #sign-out:hover{
-        background-color:#00C897;
+        background-color:#5cdb95;
     }
 
     #submit:hover{
-        background-color:#00C897;
+        background-color:#5cdb95;
     }
 
     #enter-button:hover{
-        background-color:#00C897;
+        background-color:#5cdb95;
     }
 
     #bar:hover{
-        background-color:#00C897;
+        background-color:#5cdb95;
     }
 
     #save:hover{
-        background-color:#00C897;
+        background-color:#5cdb95;
     }
      #copyButton:hover{
-        background-color:#00C897;
+        background-color:#5cdb95;
     }
 
      body {
@@ -59,27 +59,18 @@
         margin-top: 20px;
         display:inline-block;
         text-align: center;
+        background: #5cdb95;
         animation-name: backgroundColorPalette;
     	animation-duration: 15s;
     	animation-iteration-count: infinite;
     	animation-direction: alternate;
     	animation-timing-function: linear; 
+    	font-size: 25px;
+    	top:1000%;
+      left:50%;
     }
 
-    @keyframes backgroundColorPalette {
-    	0% {
-    		background: #876445;
-    	}
-    	50% {
-    		background: #CA965C;
-    	}
-    	75% {
-    	    background: #EEC373;
-    	}
-    	100% {
-    		background: #F4DFBA;
-    	}
-    }
+    
     
     #eventName {
        font-size: 40px;
@@ -330,7 +321,7 @@
       <input type="button" id="submit" value="Create countdown" onclick="countdownFunction();">
       </div>
 
-      <p>Press Save to not lose progress.</p>
+      <p>*Press Save to not lose progress.</p>
            <button id = "save">Save</button>
         <br></br>
         
@@ -349,6 +340,15 @@
 
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+
+<script type="text/javascript">
+        function zoom() {
+            document.body.style.zoom = "150%" 
+        }
+</script>
+
+<body onload="zoom()">
+
 
     <script>
         const firebaseConfig = {
