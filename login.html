@@ -7,7 +7,7 @@
   </head>
 
 <style>
-  
+
     #h2{
       font-size: 40px;
       text-align: center;
@@ -21,7 +21,7 @@
       font-variant: normal;
       font-weight: bold;
     }
-  
+
     .textbar2 {
       text-align: center;
       font-size: 30px;
@@ -31,7 +31,7 @@
       font-weight: bold;
       border: 10px;
     }
-  
+
     input[type="text"] {
       width: 400px;
     }
@@ -48,13 +48,13 @@
       color:#FFFFFF;
       background-color:#139487;
       text-align:center;
-      transition: all 0.2s;
+      transition: all 0.5s;
       font-size: 30px;
     }
 
 
     #register:hover{
-      background-color:#00C897;
+      background-color:#5cdb95;
     }
     @media all and (max-width:30em){
       #register {
@@ -62,63 +62,39 @@
         margin:0.2em auto;
       }
     }
-    
+
     #login:hover{
-       background-color:#00C897;
+       background-color:#5cdb95;
     }
-    
+
     @media all and (max-width:30em){
       #register {
         display:block;
         margin:0.2em auto;
       }
     }
- 
+
     .center-box{
       position: absolute;
       top:50%;
       left:50%;
       transform: translate(-50%,-50%);
-      border: 30px solid white;
       border-radius: 45px;
       width:600px;
       height:470px;
       text-align: center;
       color:white;
+      background: black;
     }
 
     body {
-      width: 99%;
+      width: 100%;
       height: 90vh;
       color: #fff;
-      background: linear-gradient(-45deg, rgba(238, 115, 77, 0.658), rgba(147, 74, 231, 0.726), rgb(35, 106, 213), #2eb4cc);
+      background: #5cdb95;
       background-size: 500% 500%;
       position: relative;
-      animation-name: backgroundColorPalette;
-    	animation-duration: 15s;
-    	animation-iteration-count: infinite;
-    	animation-direction: alternate;
-    	animation-timing-function: linear; 
     }
-
-    @keyframes backgroundColorPalette {
-    	0% {
-    		background: #876445;
-    	}
-    
-    	50% {
-    		background: #CA965C;
-    	}
-    	
-    	75% {
-    	    background: #EEC373;
-    	}
-
-    	100% {
-    		background: #F4DFBA;
-    	}
-    }
-
 </style>
 
   <body id="countdown">
@@ -126,13 +102,13 @@
     <div class= "center-box">
       <h2 id="h2">Welcome to Countdown website! First Login to save your info.</h2>
       <div class="aligncenter">
-      <input type="text" class ="textbar" name="userName" placeholder="your username" size="50px">
+      <input type="text" class ="textbar" name="userName" placeholder="Username" size="50px">
       <br><br>
-      <input type="text" class ="textbar2" name="userID" placeholder="your userID" align="right" size="50px">
+      <input type="text" class ="textbar2" name="userID" placeholder="User ID" align="right" size="50px">
       <br><br>
       <button id="login" id="button">Sign In</button>
             <br><br>
-	    <button id ="register" onclick="window.location.href='register.html'">Register</button>  
+	    <button id ="register" onclick="window.location.href='register.html'">Register</button>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
@@ -148,11 +124,11 @@
       appId: "1:183618774619:web:46531b2022d7367038c17e",
       measurementId: "G-H5WNP3MKT5"
     };
-      
+
       if (!firebase.apps.length) {
         firebase.initializeApp(firebaseConfig);
       }
-      
+
       var ff = firebase.firestore();
     </script>
     <script src="login.js"></script>
